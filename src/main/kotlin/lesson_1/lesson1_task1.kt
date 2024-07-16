@@ -1,6 +1,8 @@
 package lesson_1
 
 fun main() {
-    println("Тестовое решение к уроку 1. Задача 1.")
+    val sumOrders: Int = 75
+    val expGratitude: String = "Спасибо, за Ваш выбор! Надеемся на дальнейшее сотрудничество."
+    println(expGratitude)
 
 }
