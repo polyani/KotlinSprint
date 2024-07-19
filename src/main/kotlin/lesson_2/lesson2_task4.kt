@@ -12,7 +12,7 @@ fun main(){
     baffCristalRuda = cristalRuda * baff
     baffferrRuda = ferrRuda * baff
 
-    println(String.format("%.0f", baffCristalRuda))
-    println(String.format("%.0f", baffferrRuda))
+    println(String.format("Дополнительно кристаллической руды - " + "%.0f", baffCristalRuda))
+    println(String.format("Дополнительно железной руды - " + "%.0f", baffferrRuda))
 
 }
