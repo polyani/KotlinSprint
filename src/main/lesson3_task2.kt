@@ -4,10 +4,11 @@ fun main(){
     val firstName = "Татьяна"
     val surName = "Сергеевна"
     val lastName = "Андреева"
+    val changeLastName = "Сидорова"
     var age = 20
     println("$firstName $surName $lastName, $AGE_FULL, $SINGLE ")
     age = 22
-    println("$firstName $surName $lastName, $AGE_FULL, $MARRIED ")
+    println("$firstName $surName $changeLastName, $AGE_FULL, $MARRIED ")
 }
 const val AGE_FULL = "Полных лет"
 const val SINGLE  = "Не замужем"
