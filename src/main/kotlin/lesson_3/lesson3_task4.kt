@@ -1,4 +1,4 @@
-package lesson_3
+package lesson_3.lesson_3
 
 fun main() {
     var whereFrom = "E2"
