@@ -2,19 +2,19 @@ package lesson_4
 
 fun main() {
 
-    val trainyDay = 3
-    val isParity = trainyDay % 2
+    val numberDay = 6
+    val isEven = (numberDay % 2 == 0)
 
     println(
         """
-        $TRAING_HAND ${isParity == DEF_COUNTER} 
-        $TRAING_LEG ${isParity != DEF_COUNTER}
-        $TRAING_BACK ${isParity != DEF_COUNTER}
-        $TRAING_ABC ${isParity == DEF_COUNTER}
-    """.trimIndent())
+        $TRAING_HAND ${!isEven}
+        $TRAING_LEG ${isEven}
+        $TRAING_BACK ${isEven}
+        $TRAING_ABC ${!isEven}   
+        """.trimIndent()
+    )
 }
 
-const val DEF_COUNTER = 1
 const val TRAING_HAND = "Упражнения для рук:  "
 const val TRAING_LEG = "Упражнения для ног:  "
 const val TRAING_BACK = "Упражнения для спины:"
