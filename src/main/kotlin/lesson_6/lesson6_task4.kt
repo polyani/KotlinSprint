@@ -7,11 +7,11 @@ fun main() {
     var inputNumber = readln().toInt()
     var countAttempt = 4
 
-    for (i in 4 downTo 1) {
+    for (i in countAttempt downTo 1) {
         if (mysteryNumber == inputNumber) {
             "Это была великолепная игра!"
             break
-        } else print("Неверное число, осталось попыток ${countAttempt--} Введите число снова - ")
+        } else print("Неверное число, осталось попыток $i Введите число снова - ")
         inputNumber = readln().toInt()
 
     }
