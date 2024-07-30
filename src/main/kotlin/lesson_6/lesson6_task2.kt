@@ -2,13 +2,9 @@ package lesson_6
 
 fun main() {
     print("Введите нужное количество секунд - ")
-    var needTime = readln().toInt()
-    val solTime = needTime
+    val needTime = readln().toInt()
+    val timerSEC = (needTime * 1000).toLong()
+    Thread.sleep(timerSEC)
 
-    for (i in needTime downTo 1) {
-        Thread.sleep(1000)
-        needTime--
-    }
-
-    print("Прошло $solTime секунд")
+    print("Прошло $needTime секунд")
 }
