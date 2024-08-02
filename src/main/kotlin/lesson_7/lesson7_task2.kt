@@ -1,7 +1,7 @@
 package lesson_7
 
 fun main() {
-    val pinCode = (1000..9999).random()
+    var pinCode = (1000..9999).random()
     println("Ваш код авторизации: $pinCode")
     print("\nВведите ваш пин-код для авторизации: ")
     var inPinCode = readln().toInt()
@@ -11,7 +11,9 @@ fun main() {
             println("Введен правильный пин-код")
             break
         }
-        print("Пин-код ошибочен! Введите правильный: ")
+        println("Пин-код ошибочен! Введите правильный: ")
+        pinCode = (1000..9999).random()
+        println("Ваш код авторизации: $pinCode")
         inPinCode = readln().toInt()
     }
 }
