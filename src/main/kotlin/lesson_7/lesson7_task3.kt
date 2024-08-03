@@ -6,4 +6,5 @@ fun main() {
     inputNumber = readln().toInt()
     val resRange = 0..inputNumber
     println((resRange).filter { it % 2 == 0 })
+
 }
