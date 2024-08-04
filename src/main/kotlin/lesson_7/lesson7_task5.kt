@@ -4,8 +4,10 @@ fun main() {
 
     print("Введите количество символов в пароле (минимальное 6символов) - ")
     var leightPass = readln().toInt()
-    val charList = ('A'..'Z') + ('a'..'z') + (0..9)
-    var resultPass = ""
+    val charCapitalList = ('A'..'Z')
+    val charLowerList = ('a'..'z')
+    val numberList = (0..9)
+    var resPass = emptyArray<String>()
 
     while (leightPass < 6) {
         print(
@@ -14,11 +16,16 @@ fun main() {
         """.trimMargin()
         )
         leightPass = readln().toInt()
-
     }
+
+    if (leightPass % 3 != 0) {
+        leightPass = (leightPass / 3 + 1)
+    } else leightPass = (leightPass / 3)
 
     for (i in 1..leightPass) {
-        resultPass = resultPass + charList.random().toString()
+        resPass = resPass + charCapitalList.random().toString() + numberList.random().toString() +
+                charLowerList.random().toString()
     }
-    print(resultPass)
+    resPass.shuffle()
+    resPass.forEach { print(it) }
 }
