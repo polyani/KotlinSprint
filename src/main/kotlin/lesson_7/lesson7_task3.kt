@@ -10,5 +10,4 @@ fun main() {
     for (i in 0..inputNumber step 2) {
         println(i)
     }
-
 }
