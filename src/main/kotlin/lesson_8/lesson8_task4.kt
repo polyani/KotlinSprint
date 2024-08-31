@@ -1,7 +1,8 @@
 package lesson_8
 
 fun main() {
-    var listOfIngredients = arrayOf("мука", "вода", "молоко", "соль", "сахар", "патока", "солод", "яйцо")
+    val listOfIngredients = arrayOf("мука", "вода", "молоко", "соль", "сахар", "патока", "солод", "яйцо")
+
     fun outPrint() {
         for (i in listOfIngredients) {
             println("${listOfIngredients.indexOf(i) + 1} - $i")
@@ -12,20 +13,18 @@ fun main() {
 
     print(("\nКакой ингредиент нужно заменить? \nВведите - "))
     var inChange = readln()
-    var exist = listOfIngredients.contains(inChange) // результат Boolean
-    while (exist == false) {
+    var contIngr = listOfIngredients.indexOf(inChange) // ищем индекс введённого значения в объявленном списке
+
+    while (contIngr == -1) {
         println("Такого ингредиента в списке нет\nВведите элемент из списка - ")
         inChange = readln()
-        exist = listOfIngredients.contains(inChange)
+        contIngr = listOfIngredients.indexOf(inChange)
     }
 
-    val existIndex = listOfIngredients.indexOf(inChange) // индекс элемента от 0
+    print("Введите новый ингредиент - ")
+    val newIngredient = readln()
+    listOfIngredients.set(contIngr, newIngredient)
 
-    if (existIndex >= 0) {
-        print("Введите новый ингредиент - ")
-        val newIngredient = readln()
-        listOfIngredients.set(existIndex, newIngredient)
-    }
     println("“Готово! Вы сохранили следующий список:")
     outPrint()
 
