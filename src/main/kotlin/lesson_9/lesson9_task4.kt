@@ -8,14 +8,13 @@ package lesson_9
 - используй тот метод сортировки, который возвращает новую отсортированную коллекцию.
  */
 
+// копипаст  перец, авокадо, вода, рис, баранина
+
 fun main() {
-    val ingredients = mutableListOf<String>()
     print("Введите 5 ингредиентов в форме {ингредиент, }" + " - ")
-    val inputString = readln()
-    val resultList = inputString.split(", ")
-    ingredients.addAll(resultList)
+    val inputString = readln().toString()
+    val ingredients = inputString.split(", ").toMutableList()
     ingredients.sort()
-//    println(ingredients)
     for ((index, ingredient) in ingredients.withIndex()) {
         println("${index + 1}. $ingredient ")
     }
