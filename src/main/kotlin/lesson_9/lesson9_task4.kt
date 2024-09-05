@@ -12,7 +12,7 @@ package lesson_9
 
 fun main() {
     print("Введите 5 ингредиентов в форме {ингредиент, }" + " - ")
-    val inputString = readln().toString()
+    val inputString = readln()
     val ingredients = inputString.split(", ").toMutableList()
     ingredients.sort()
     for ((index, ingredient) in ingredients.withIndex()) {
