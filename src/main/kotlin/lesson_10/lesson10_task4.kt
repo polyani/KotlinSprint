@@ -5,9 +5,9 @@ fun main() {
     var resRollRobot: Short
     var resRollHuman: Short
     var countWinHuman: Long = 0
-    var responsse = "Да"
+    var responsse = "Да".equals("да", true)
     println("Начало игры")
-    while (responsse == "Да") {
+    while (responsse == true) {
         resRollRobot = rollTheDice()
         resRollHuman = rollTheDice()
         println("Бросок человека - $resRollHuman")
@@ -25,8 +25,8 @@ fun main() {
 // метод бросить кости
 private fun rollTheDice(): Short = (1..6).random().toShort()
 
-private fun roundGame(): String {
+private fun roundGame(): Boolean {
     println("Хотите бросить кости еще раз? Введите \"Да\" или \"Нет\"")
     val answer = readln()
-    return answer
+    return answer.equals("Да", true)
 }
