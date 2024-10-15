@@ -1,19 +1,14 @@
 package lesson_9
 
 fun main() {
-    var countIndex = 0
-    val ingredientsList: MutableList<String> = mutableListOf()
-    println("Введите 5 ингредиентов.")
-    while (countIndex != 5) {
+    val setIngredients = mutableSetOf<String>()
+    println("Введите 5 ингредиентов")
+    var index = 0
+    while (index != 4) {
         print("Введите ингредиент - ")
-        val ingredientIn = readln()
-        if (ingredientsList.contains(ingredientIn)) {
-        } else {
-            ingredientsList.add(ingredientIn)
-            countIndex = ingredientsList.lastIndex + 1
-        }
+        val ingredient = readln()
+        setIngredients.add(ingredient)
+        index = setIngredients.lastIndexOf(ingredient)
     }
-    ingredientsList.sort()
-    ingredientsList[0] = ingredientsList[0].replaceFirstChar(Char::uppercaseChar)
-    println(ingredientsList)
+    println(setIngredients.sorted().joinToString(", ").replaceFirstChar { it.uppercaseChar() })
 }
