@@ -11,25 +11,21 @@ fun main() {
     val growthExponent = growth.pow(exponentFloat)
     val imt = weightBody / growthExponent
 
-    when (imt) {
-        imt -> {
-            when {
-                imt < 18.5 -> {
-                    println("%.2f".format(imt) + " - ИМТ < 18.5: Недостаточная масса тела")
-                }
+    when {
+        imt < 18.5 -> {
+            println("%.2f".format(imt) + " - ИМТ < 18.5: Недостаточная масса тела")
+        }
 
-                imt >= 18.5 && imt < 25.0 -> {
-                    println("%.2f".format(imt) + " - 18.5 ≤ ИМТ < 25: Нормальная масса тела")
-                }
+        imt >= 18.5 && imt < 25.0 -> {
+            println("%.2f".format(imt) + " - 18.5 ≤ ИМТ < 25: Нормальная масса тела")
+        }
 
-                imt >= 25.0 && imt < 30.0 -> {
-                    println("%.2f".format(imt) + " - 25 ≤ ИМТ < 30: Избыточная масса тела")
-                }
+        imt >= 25.0 && imt < 30.0 -> {
+            println("%.2f".format(imt) + " - 25 ≤ ИМТ < 30: Избыточная масса тела")
+        }
 
-                else -> {
-                    println("%.2f".format(imt) + " - ИМТ ≥ 30: Ожирение")
-                }
-            }
+        else -> {
+            println("%.2f".format(imt) + " - ИМТ ≥ 30: Ожирение")
         }
     }
 }
