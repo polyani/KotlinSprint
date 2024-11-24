@@ -21,11 +21,11 @@ fun main() {
         }
 
         imt >= 25.0 && imt < 30.0 -> {
-            println("%.2f".format(imt) + " - 25 ≤ ИМТ < 30: Избыточная масса тела")
+            println("%.2f - 25 ≤ ИМТ < 30: Избыточная масса тела".format(imt))
         }
 
         else -> {
-            println("%.2f".format(imt) + " - ИМТ ≥ 30: Ожирение")
+            println("%.2f - ИМТ ≥ 30: Ожирение".format(imt))
         }
     }
 }
